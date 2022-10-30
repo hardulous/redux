@@ -191,4 +191,4 @@ const addTodo = (text) => {
 
 // #### REDUX MIDDLEWARE
 
-// Middlware allow us to perform side effect operation just after the action is dispatched and moment it reaches the reducer function 
+// Middlware allow us to perform side effect operation just after the action is dispatched and moment it reaches the reducer function , it is imp because redux originally is designed to perform only syncronous working in reducer function but we in real word we need to perform side effect
