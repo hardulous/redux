@@ -7,7 +7,10 @@ function CakeContainer() {
     
     console.log("CAKE CONTAINER WITH HOOK RENDER")
     // here by this hook we can get any information from REDUX STORE 
-    let cakes = useSelector(state => state.cake.numOfCakes); 
+    let cakes = useSelector(state => {
+        console.log(state)
+        return state.cake.numOfCakes
+    }); 
     
     // here now this below variable become a disptach function and just passed an action object to it 
     let dispatch = useDispatch();

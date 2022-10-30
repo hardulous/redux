@@ -1,6 +1,3 @@
-
-import logo from './logo.svg';
-import './App.css';
 import InputCakeContainer from './Component/InputCakeContainer';
 import ItemContainer from './Component/ItemContainer';
 import UserContainer from './Component/UserContainer';
@@ -16,17 +13,17 @@ function App() {
 
         <h1 style={{color:'blue',textAlign:'center'}}>LEARNING REACT-REDUX</h1>
      
-        {/* <CakeContainer1/> */}
+        <CakeContainer1/>
         {/* <CakeContainer2/> */}
-        <CakeAndIceCreams/>
-        <InputCakeContainer/>
+        {/* <CakeAndIceCreams/> */}
+        {/* <InputCakeContainer/> */}
 
         {/* here now ownProps contain props cake and iceCream */}
         {/* <ItemContainer cake={"choco-cake"}/> */}
         {/* <ItemContainer iceCream={"choco-iceCream"}/> */}
 
         {/* USER CONTAINER  */}
-        <UserContainer/>
+        {/* <UserContainer/> */}
 
 
     </div>
@@ -191,3 +188,7 @@ const addTodo = (text) => {
 // NOTE ::::: ONE IMPORTANT BEHAVIOUR OF REACT-REDUX , here in redux we have 3 state of our application cake,icecream and users , now let's say i have 3 component A,B,C where A is subscribed to state cake and icecream , b is subscribed to only cake where as c is subscribed to user state , now let's say from component A we have dispatch an action which changed the state cake , as soon as state change ONLY THOSE COMPONENT WHICH ARE ACTUALLY USING THIS STATE CAKE AND ITS PROPERTY WILL GET RE-RENDER AND ELSE ONE WILL NOT RE-RENDER which in case only component A and B will re-render but not C , and if we dispatched action from A which will change iceCream state so only component A will re-render and if changed User State then only component C will re-render 
 
 // IT MEANS CHANGES TO STATE OF OUR REDUX APP WILL LEADS TO RE-RENDERING OF ONLY THOSE COMPONENT WHICH ARE SUBSCRIBED THAT IS USING THAT SPECIFIC STATE VALUE   
+
+// #### REDUX MIDDLEWARE
+
+// Middlware allow us to perform side effect operation just after the action is dispatched and moment it reaches the reducer function 
